@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Auto Vermietung</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .car {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .car img {
+            max-width: 150px;
+            border-radius: 5px;
+        }
+        .car-details {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .car-details h3 {
+            margin: 0 0 10px;
+        }
+        .book-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .book-btn:hover {
+            background-color: #218838;
+        }
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Auto Vermietung</h1>
+    <p>Finde das perfekte Auto für deine Reise!</p>
+</header>
+
+<div class="container">
+    <div class="car">
+        <img src="car1.jpg" alt="Auto 1">
+        <div class="car-details">
+            <h3>BMW 3er</h3>
+            <p>Preis: 50€/Tag</p>
+            <p>Beschreibung: Komfortabel, sparsam, ideal für Stadt und Land.</p>
+        </div>
+        <button class="book-btn" onclick="bookCar('BMW 3er')">Buchen</button>
+    </div>
+
+    <div class="car">
+        <img src="car2.jpg" alt="Auto 2">
+        <div class="car-details">
+            <h3>Mercedes-Benz A-Klasse</h3>
+            <p>Preis: 60€/Tag</p>
+            <p>Beschreibung: Luxus und Leistung in einem kompakten Fahrzeug.</p>
+        </div>
+        <button class="book-btn" onclick="bookCar('Mercedes-Benz A-Klasse')">Buchen</button>
+    </div>
+
+    <div class="car">
+        <img src="car3.jpg" alt="Auto 3">
+        <div class="car-details">
+            <h3>Audi Q5</h3>
+            <p>Preis: 80€/Tag</p>
+            <p>Beschreibung: Perfekt für lange Fahrten und Familienreisen.</p>
+        </div>
+        <button class="book-btn" onclick="bookCar('Audi Q5')">Buchen</button>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Auto Vermietung. Alle Rechte vorbehalten.</p>
+</footer>
+
+<script>
+    function bookCar(carName) {
+        const userName = prompt("Bitte gib deinen Namen ein:");
+        if (userName) {
+            alert(`Danke, ${userName}! Du hast das Auto "${carName}" erfolgreich gebucht.`);
+        }
+    }
+</script>
+
+</body>
+</html>
